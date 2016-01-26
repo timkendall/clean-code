@@ -1,0 +1,23 @@
+# Functions
+- **Keep very small (hopefully < ~10 lines)**
+- A function should lead you to the next function in a compelling order
+- Extract conditionals to functions (ex. `isLoading()`). This increases readability and helps keep functions small
+- **Do a single thing**
+- The "thing" a function is doing should include steps *one level of abstraction below* the name of the function
+- Statements within a function should be on the same level of abstraction. For example, `getUser` and `parseInt(45)` are not on the same levels of abstraction. Using different levels of abstraction in a single function creates confusion for the reader. Is a particular expression an essential concept or a detail? It's hard to know when mixing levels of abstraction.
+- Code should read like a top-down narrative. Each level of abstraction leads to the next.
+- Switch statements should be buried in a low-level class and not repeated.
+- Long and descriptive function names are acceptable
+- Choosing function names may take time. **Don't be afraid to try multiple names** (find and replace is trivial).
+- **Keep function arguments between 0 and 3**
+- Think hard about using three arguments.
+- **Keep functions pure (no side-effects!)**
+- Don't use flag arguments. This immediately indicates that the function is doing more than one thing. You should split the function up instead.
+- Reduce the number of arguments by creating objects instead (ex. `makeCircle(Point: center, int: radius)`)
+- Be careful of dyads (2 arguments). Many arguments don't have a natural ordering and can easily cause confusion as to which comes first (ex. `assertEqual(expected, actual)`).
+- Arguments are inputs to functions, don't manipulate them
+- Functions should **either do something or answer something, but not both**.
+- Prefer exceptions over returning error codes. Returning error codes forces the developer to handle that code immediately (ex. `if (deleteUser() === OK)` and mixes command and query. Exceptions allow error handling to be separated cleanly from the "happy path".
+- **Don't repeat yourself**
+- No one starts by writing a perfect function. Usually the first version is a long mess that takes effort to cleanup and break into separate components - just like writing.
+- Systems are stories to be told rather than programs to be written.

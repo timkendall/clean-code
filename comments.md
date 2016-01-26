@@ -1,0 +1,22 @@
+# Comments
+- Comments are for compensating for our lack of ability to express ourselves in code
+- Comments are hard to maintain, think hard before you add some
+- **Inaccurate comments are far worse than no comments**. Set expectations that will never be filled, lay down rules that need not and should not be followed.
+- Write a function that describes the same thing that a would-be comment would
+- There are a few types of acceptable comments
+- **Legal Comments** - Copyright, author statements 
+- **Informative Comments** - Provide basic information or context to make something easier to understand
+- **Explanation of Intent** - Used for explaining a decision
+- **Clarification** - Useful for clarifying obscure concepts; good for use with standard libraries or code you can't modify
+- **Warning of Consequences** - Warn a future engineer about something
+- **TODO Comments** - Useful for marking something that should be done but that you may not have time to finish now. NOT an excuse to leave bad code.
+- **Amplification** - Used to amplify the importance of something that may otherwise seem inconsequential
+- Bad types of comments include mumbling, redundant, misleading, mandated, journal, and noise comments
+- It's silly to mandate that every function have a documenting comment. Not only will this clutter your code but it is just another thing to keep updated.
+- **Don't leave commented out code.** Others will be confused and afraid to remove it.
+- Only include local information in your comments. You can't depend on global information staying the same.
+- Connection between the code and it's comment should be obvious
+- **Comments shouldn't need their own explanation**
+- A good function name is usually better than a comment header
+- Generated documentation for internal functions is generally not useful
+- Comments can be used to ease a reader into a complicated routine 
