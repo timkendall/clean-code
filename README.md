@@ -9,6 +9,7 @@ In this repo you can find my notes for [Clean Code](http://www.amazon.com/Clean-
 * [`Functions`](#functions)
 * [`Comments`](#comments)
 * [`Formatting`](#formatting)
+* [`Objects vs. Data Structures`](#objects-and-data-structures)
 
 <a name="naming"></a>
 ### Naming
@@ -56,3 +57,14 @@ In this repo you can find my notes for [Clean Code](http://www.amazon.com/Clean-
 - Keep lines short (~120 characters)
 - Use horizontal whitespace to associate strongly related things
 - [View More](/formatting.md)
+
+<a name="objects-and-data-structures"></a>
+### Objects vs. Data Structures
+- Hiding implementation is about abstraction
+- Abstraction allows manipulatin of the *essence* of the data, without having to know it's implementation
+- Seriously think about best way to represent the data an object contains
+- **Objects** hide their data behind abstractions and expose functions that operate on that data
+- **Data Structures** expose their data and have no meanigful functions
+- "A module should not know about the innard of the objects it manipulates" - (Law of Demeter)
+- Example of a "Train Wreck" `String outputDir = ctxt.getOptions().getScratchDir().getAbsolutePath();`
+- [View More](/objects-and-data-structures.md)

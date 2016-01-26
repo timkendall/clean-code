@@ -1,0 +1,16 @@
+# Objects vs. Data Structures
+- Hiding implementation is about abstraction
+- Abstraction allows manipulatin of the *essence* of the data, without having to know it's implementation
+- Seriously think about best way to represent the data an object contains
+- Don't blindly add getters and setters
+- **Objects** hide their data behind abstractions and expose functions that operate on that data
+- **Data Structures** expose their data and have no meanigful functions
+- "A module should not know about the innard of the objects it manipulates" - (Law of Demeter)
+- Example of a "Train Wreck" `String outputDir = ctxt.getOptions().getScratchDir().getAbsolutePath();`
+- Law of Demeter doesn't apply to Data Structures who naturally expose their internal structure
+- Hybrid structures that are half object and half data structure are the worst of both worlds. They have functions that do significant things but also public variables or getters that tempt external functions to use those variables the way a procedural would use a data structure.
+- Getters and setters directly linked to private variables have little value (ex. `getAge()` when `age` is a private)
+- Objects expose behavior and hide their data. Easy to add new kinds of objects without changing behaviors. Hard to add new behaviors without changing objects.
+- Data Structures expose data and have no significant behavior. Easy to add new behaviors to existing data structures. Hard to add new data structures to existing functions.
+- Sometimes we want flexibility to add new data types. Othertimes we want flexibility to add new behaviors.
+- Choose the right approach for each problem
