@@ -1,0 +1,15 @@
+# Formatting
+- Stick to a common set of style rules
+- **Getting it to work isn't the first concern!** Code style and readability will affect the code long after the original has been changed.
+- **Style and discipline survives even if your code doesn't**
+- Try and keep files between 200 and 500 lines
+- **Vertical Formatting** - High to low-level, separate groups of related lines by a blank line, tightly-related code should be vertically dense
+- Concepts closely related should be kept vertically close 
+- Vertical distance between concepts should be a measure of how important each is to understanding the other
+- Declare variables as close to their usage as possible
+- Short functions should have all variables declared at top
+- Declare instance variables at the top of classes
+- Caller functions should be above their callees (ideally). *This gives the program a natural flow.*
+- Low-level functions should come last 
+- Keep lines short (~120 characters)
+- Use horizontal whitespace to associate strongly related things

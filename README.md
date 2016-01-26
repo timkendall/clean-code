@@ -8,6 +8,7 @@ In this repo you can find my notes for [Clean Code](http://www.amazon.com/Clean-
 * [`Naming`](#naming)
 * [`Functions`](#functions)
 * [`Comments`](#comments)
+* [`Formatting`](#formatting)
 
 <a name="naming"></a>
 ### Naming
@@ -43,3 +44,15 @@ In this repo you can find my notes for [Clean Code](http://www.amazon.com/Clean-
 - *Comments shouldn't need their own explanation*
 - A good function name is usually better than a comment header
 - [View More](/comments.md)
+
+<a name="formatting"></a>
+### Formatting
+- Stick to a common set of style rules
+- **Style and discipline survives even if your code doesn't**
+- Try and keep files between 200 and 500 lines
+- **Vertical Formatting** - High to low-level, separate groups of related lines by a blank line, tightly-related code should be vertically dense
+- Caller functions should be above their callees (ideally). *This gives the program a natural flow.*
+- Low-level functions should come last 
+- Keep lines short (~120 characters)
+- Use horizontal whitespace to associate strongly related things
+- [View More](/formatting.md)
