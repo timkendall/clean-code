@@ -1,6 +1,6 @@
 # clean-code
 
-In this repo you can find my notes for [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?ie=UTF8&qid=1452837629&sr=8-1&keywords=clean+code) as I read through it. This is primarily to act as a learning tool and reference for me but I hope others will find it beneficial as well. Other repos that were trying to do this were not organized well and had either too much or too little information. Here I will list the handfull of notes I think most important for each section. 
+In this repo you can find my notes for [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?ie=UTF8&qid=1452837629&sr=8-1&keywords=clean+code) as I read through it. This is primarily to act as a learning tool and reference for me but I hope others will find it beneficial as well. Other repos that were trying to do this were not organized well and had either too much or too little information. Here I will list the handfull of notes I think most important for each section.
 
 
 ## Sections
@@ -10,6 +10,7 @@ In this repo you can find my notes for [Clean Code](http://www.amazon.com/Clean-
 * [`Comments`](#comments)
 * [`Formatting`](#formatting)
 * [`Objects vs. Data Structures`](#objects-and-data-structures)
+* [`Error Handling`](#error-handling)
 
 <a name="naming"></a>
 ### Naming
@@ -53,7 +54,7 @@ In this repo you can find my notes for [Clean Code](http://www.amazon.com/Clean-
 - Try and keep files between 200 and 500 lines
 - **Vertical Formatting** - High to low-level, separate groups of related lines by a blank line, tightly-related code should be vertically dense
 - Caller functions should be above their callees (ideally). *This gives the program a natural flow.*
-- Low-level functions should come last 
+- Low-level functions should come last
 - Keep lines short (~120 characters)
 - Use horizontal whitespace to associate strongly related things
 - [View More](/formatting.md)
@@ -68,3 +69,14 @@ In this repo you can find my notes for [Clean Code](http://www.amazon.com/Clean-
 - "A module should not know about the innard of the objects it manipulates" - (Law of Demeter)
 - Example of a "Train Wreck" `String outputDir = ctxt.getOptions().getScratchDir().getAbsolutePath();`
 - [View More](/objects-and-data-structures.md)
+
+<a name="error-handling"></a>
+### Error Handling
+- Keep error handling separate from logic
+- Throw exceptions vs. returning error codes
+- Stack traces can't tell you the intent of the failed operation
+- Pass helpful error messages with your exceptions
+- Wrap 3rd-party APIs - makes it easier to switch and aren't tied to a vendor's API choices
+- The Special Case Pattern
+- Don't return or pass `null`
+- **Treat error handling as a separate concern!**
